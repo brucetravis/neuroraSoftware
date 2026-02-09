@@ -6,7 +6,6 @@ import { ToastContainer } from 'react-toastify';
 import { Route, Routes } from 'react-router-dom';
 import { aiPlans, swPlans } from './data/Pricing';
 import { usePricing } from './contexts/PricingProvider';
-import ChatWidget from './components/chatwidget/ChatWidget';
 import LoadingPage from './components/loadingpage/LoadingPage';
 import CustomQuoteModal from './components/modals/custom/CustomQuoteModal';
 import StandardPricingModal from './components/modals/standard/StandardPricingModal';
@@ -38,9 +37,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
         </Routes>
-        
-        
-        <ChatWidget />
 
         {/* Overlay loading page */}
         {showLoading && <LoadingPage onFinish={() => setShowLoading(false)} />}

@@ -8,12 +8,12 @@ header {
     background: transparent;
     backdrop-filter: blur(12px);
     box-sizing: border-box;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: all 0.5s ease;
 }
 
 header.show {
-    transform: translateY(0) /* display the header scrolling up */
+    transform: translateY(0); /* display the header scrolling up */
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.3);
 }
 
 header.hide {

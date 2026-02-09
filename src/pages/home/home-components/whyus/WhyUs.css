@@ -1,0 +1,102 @@
+.whyus-hero {
+  position: relative;
+  padding: 6rem 1.5rem;
+  overflow: hidden ;
+  color: #fff;
+  /* background: linear-gradient(180deg, #07030a 0%, #0f0420 100%); */
+}
+
+.whyus-hero::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgb(200, 124, 255), transparent 60%);
+  /* background: radial-gradient(circle, rgb(155, 255, 124), transparent 60%); */
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+.whyus-title {
+  color: rgba(200,124,255,0.9);
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: 0 0 0.6rem 0;
+  margin-bottom: 12vh;
+  font-size: 0.85rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.whyus-heading {
+  margin: 0 0 1rem 0;
+  font-size: 3rem;
+  line-height: 1.08;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 6px 30px rgba(19,6,34,0.6);
+}
+
+.whyus-heading .accent {
+  color: #c87cff;
+  /* text-shadow: 0 0 18px rgba(200,124,255,0.85); */
+  text-shadow: 0 0 18px rgba(16, 4, 26, 0.85);
+}
+
+.whyus-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.whyus-left, .whyus-right {
+  flex: 1;
+}
+
+.whyus-point {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(25,6,54,0.6);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 990px) {
+  .whyus-heading {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    line-height: 1.08;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 6px 30px rgba(19,6,34,0.6);
+  }
+
+  .whyus-inner {
+    flex-direction: column;
+  }
+
+  .whyus-point {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(25,6,54,0.6);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .whyus-left, .whyus-right {
+    flex: 1;
+    width: 100%;
+    /* background-color: red; */
+  }
+}

@@ -5,6 +5,7 @@ import Contact from './home-components/contact/Contact'
 import Services from './home-components/services/Services'
 import { useActive } from '../../contexts/active/ActiveContext'
 import { useScrollRefs } from '../../contexts/scroll/ScrollContext'
+import About from './home-components/about/About'
 
 export default function Home() {
     
@@ -18,6 +19,7 @@ export default function Home() {
 
   return (
     <div>
+      <section ref={about}><About /></section>
       <section ref={services}><Services /></section>
       <section ref={whyUs}><WhyUs /></section>
       <section ref={pricing}><Pricing /></section>

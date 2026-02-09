@@ -2,8 +2,8 @@
     max-width: 400px;
     margin: 0 auto;
     font-family: sans-serif;
-    position: fixed;
-    bottom: 20px;
+    position: absolute;
+    bottom: -25vh;
     right: 20px;
     z-index: 99999;
     display: flex;

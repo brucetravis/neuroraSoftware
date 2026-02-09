@@ -1,9 +1,10 @@
 import React from 'react'
+import WhyUs from './home-components/whyus/WhyUs'
 import Pricing from './home-components/pricing/Pricing'
+import Contact from './home-components/contact/Contact'
+import Services from './home-components/services/Services'
 import { useActive } from '../../contexts/active/ActiveContext'
 import { useScrollRefs } from '../../contexts/scroll/ScrollContext'
-import Contact from './home-components/contact/Contact'
-import WhyUs from './home-components/whyus/WhyUs'
 
 export default function Home() {
     
@@ -17,6 +18,7 @@ export default function Home() {
 
   return (
     <div>
+      <section ref={services}><Services /></section>
       <section ref={whyUs}><WhyUs /></section>
       <section ref={pricing}><Pricing /></section>
       <section ref={contact}><Contact /></section>

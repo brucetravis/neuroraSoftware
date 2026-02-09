@@ -6,6 +6,7 @@ import Services from './home-components/services/Services'
 import { useActive } from '../../contexts/active/ActiveContext'
 import { useScrollRefs } from '../../contexts/scroll/ScrollContext'
 import About from './home-components/about/About'
+import Hero from './home-components/hero/Hero'
 
 export default function Home() {
     
@@ -19,6 +20,7 @@ export default function Home() {
 
   return (
     <div>
+      <section ref={hero}>{<Hero />}</section>
       <section ref={about}><About /></section>
       <section ref={services}><Services /></section>
       <section ref={whyUs}><WhyUs /></section>

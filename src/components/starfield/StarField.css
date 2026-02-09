@@ -1,0 +1,121 @@
+.starfield {
+    position: absolute;
+    inset: 0;
+    z-index: 1; /* below hero content */
+    overflow: hidden;
+}
+
+
+/* .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: 
+        drift linear infinite, 
+        shine ease-in-out infinite;
+    
+    animation-duration: 
+        drift linear infinite, 
+        shine ease-in-out infinite;
+} */
+
+/* .star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+
+  animation:
+    drift linear infinite,
+    shine ease-in-out infinite;
+
+  /* Let JS assign random durations + delays 
+  animation-duration:
+    var(--driftDuration, 20s),
+    var(--shineDuration, 2s);
+
+  animation-delay:
+    var(--driftDelay, 0s),
+    var(--shineDelay, 0s);
+
+  will-change: opacity, box-shadow, transform;
+} */
+
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+
+  animation:
+    drift linear infinite,
+    shine ease-in-out infinite;
+
+  animation-duration:
+    var(--driftDuration, 20s),
+    var(--shineDuration, 2s);
+
+  animation-delay:
+    var(--driftDelay, 0s),
+    var(--shineDelay, 0s);
+
+  will-change: opacity, transform;
+}
+
+
+
+@keyframes drift {
+    0% {
+        transform: translateY(0) translatex(0);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: translate(var(--dx, 10px), var(--dy, 10px));
+        opacity: 0.4;
+    }
+
+    100% {
+        transform: translate(0px, 0px) translateY(-20px) translateX(10px);
+        opacity: 0.8;
+    }
+}
+
+/* @keyframes shine {
+  0% {
+    opacity: 0.3;
+    box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 8px 3px rgba(255, 255, 255, 1);
+  }
+  100% {
+    opacity: 0.3;
+    box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.5);
+  }
+} */
+
+/* @keyframes shine {
+  0% {
+    opacity: 0.2;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 6px 3px rgba(255, 255, 255, 1);
+  }
+  100% {
+    opacity: 0.2;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3);
+  }
+} */
+
+
+@keyframes shine {
+  0% { opacity: var(--minOpacity); }
+  50% { opacity: var(--maxOpacity); }
+  100% { opacity: var(--minOpacity); }
+}

@@ -17,9 +17,9 @@ export default function Home() {
 
   return (
     <div>
-        <section ref={whyUs}><WhyUs /></section>
-        <section ref={pricing}><Pricing /></section>
-        <section ref={contact}><Contact /></section>
+      <section ref={whyUs}><WhyUs /></section>
+      <section ref={pricing}><Pricing /></section>
+      <section ref={contact}><Contact /></section>
     </div>
   )
 }

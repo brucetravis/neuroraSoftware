@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react'
 import './Home.css'
 import Hero from './home-components/hero/Hero'
@@ -7,10 +6,6 @@ import Services from './home-components/services/Services'
 import WhyUs from './home-components/whyus/WhyUs'
 import Pricing from './home-components/pricing/Pricing'
 import Contact from './home-components/contact/Contact'
-=======
-import React from 'react'
-// import Pricing from './home-components/pricing/Pricing'
->>>>>>> feat/contact
 import { useActive } from '../../contexts/active/ActiveContext'
 import { useScrollRefs } from '../../contexts/scroll/ScrollContext'
 
@@ -70,17 +65,12 @@ export default function Home() {
 
   return (
     <div>
-<<<<<<< HEAD
       <section ref={hero}><Hero /></section>
       <section ref={about}><About /></section>
       <section ref={services}><Services /></section>
       <section ref={whyUs}><WhyUs /></section>
       <section ref={pricing}><Pricing /></section>
       <section ref={contact}><Contact /></section>
-=======
-        {/* <section ref={pricing}><Pricing /></section> */}
-        <section ref={contact}><Contact /></section>
->>>>>>> feat/contact
     </div>
   )
 }

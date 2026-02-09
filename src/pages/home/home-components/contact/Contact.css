@@ -1,0 +1,165 @@
+.contact-section {
+  position: relative;
+  padding: 7rem 1.5rem;
+  background-image: url(../../../../images/contact.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,rgba(7, 3, 10, 0.6), rgba(15, 4, 32,0.5) 100%);
+  /* backdrop-filter: blur(10px); */
+  z-index: 1;
+}
+.contact-content {
+  max-width: 800px;
+  /* background-color: red; */
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+/* ------------------------------
+   HEADINGS
+------------------------------ */
+.contact-kicker {
+  color: #c97aff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.contact-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.contact-subtext {
+  font-size: 1.125rem;
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+
+/* ------------------------------
+   FORM — GLASS CARD
+------------------------------ */
+.contact-form {
+  margin: 0 auto;
+  width: 100%;
+  padding: 2.8rem;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(25px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------------------
+   FORM ROW
+------------------------------ */
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.row .field {
+  flex: 1;
+}
+
+/* ------------------------------
+   LABELS + INPUTS
+------------------------------ */
+.field {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #cfcfcf;
+}
+
+.field input:focus,
+.field textarea:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid #c97aff;
+}
+
+.field textarea {
+  height: 120px;
+  resize: none;
+  line-height: 1.5;
+}
+
+/* ------------------------------
+   BUTTON
+------------------------------ */
+.contact-btn {
+  margin-top: 10px;
+  background: linear-gradient(135deg, #b05fff, #7d4dff);
+  border: none;
+  /* border-radius: 1px; */
+  /* letter-spacing: 0.5px; */
+  transition: all 0.5s ease;
+  box-shadow: 0 8px 25px rgba(122, 0, 255, 0.4);
+}
+
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(122, 0, 255, 0.6);
+}
+
+
+@media (max-width: 990px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .contact-heading {
+    font-size: 1.7rem;
+  }
+
+  .contact-subtext {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 3rem;
+  }
+}

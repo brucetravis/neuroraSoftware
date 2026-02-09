@@ -2,6 +2,7 @@ import React from 'react'
 import Pricing from './home-components/pricing/Pricing'
 import { useActive } from '../../contexts/active/ActiveContext'
 import { useScrollRefs } from '../../contexts/scroll/ScrollContext'
+import Contact from './home-components/contact/Contact'
 
 export default function Home() {
     
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <div>
         <section ref={pricing}><Pricing /></section>
+        <section ref={contact}><Contact /></section>
     </div>
   )
 }

@@ -54,7 +54,7 @@ export default function Hero() {
         </animated.h3>
         
         <animated.h1 style={heroTitleSpring}>
-          Helping African Businesses <span className="highlight">Adopt and Manage AI</span>
+          Helping African Businesses <span className="highlight">Adopt AI</span>
         </animated.h1>
 
         <animated.p style={heroTextSpring}>

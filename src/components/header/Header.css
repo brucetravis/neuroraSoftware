@@ -12,12 +12,14 @@ header {
 }
 
 header.show {
-    transform: translateY(0); /* display the header scrolling up */
+    transform: translateY(0%); /* display the header scrolling up */
     box-shadow: -2px 0 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 header.hide {
-    transform: translateY(-100%) /* hide at the top when scrolling down */
+    transform: translateY(-100%); /* hide at the top when scrolling down */
+    transition: transform 0.3s ease;
 }
 
 header nav {

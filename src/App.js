@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import './App.css';
 import Home from './pages/home/Home';
@@ -59,15 +58,6 @@ function App() {
         theme=''
       />
     </>
-=======
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
->>>>>>> feat/footer
   );
 }
 

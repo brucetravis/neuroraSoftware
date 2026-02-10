@@ -54,13 +54,15 @@ export default function Hero() {
         </animated.h3>
         
         <animated.h1 style={heroTitleSpring}>
-          Empowering the Future with <span className="highlight">AI-Powered Software Solutions</span>
+          Helping African Businesses <span className="highlight">Adopt and Manage AI</span>
         </animated.h1>
 
         <animated.p style={heroTextSpring}>
-          At Neurora, we create <strong className='highlight'>intelligent software</strong> and smart digital tools
-          that help businesses scale effortlessly, streamline workflows, and achieve measurable growth.
+          Neurora offers an <strong className='highlight'>AI adoption platform</strong> that helps African businesses adopt, adapt, and 
+          manage AI tools. The platform guides which features to use, tracks performance, provides insights, and recommends actions to 
+          maximize growth and efficiency.
         </animated.p>
+
 
       </div>
     </section>

@@ -64,15 +64,18 @@
   text-align: center;
 }
 
-
 .services-lead {
   color: rgba(230,226,240,0.92);
   max-width: 65ch;
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   line-height: 1.7;
-  margin: 0 auto 3rem auto;
-  margin-top: 1.5rem;
+  margin: 5rem auto 3rem auto;
   text-align: center;
+}
+
+.services-heading .accent {
+  color: #c87cff;
+  text-shadow: 0 0 18px rgba(16, 4, 26, 0.85);
 }
 
 
@@ -91,8 +94,6 @@
 .service-card {
   background: rgba(25, 6, 54, 0.6);
   backdrop-filter: blur(12px);
-  /* background: rgba(76, 219, 10, 0.952); */
-  backdrop-filter: blur(10px);
   border-radius: 1rem;
   padding: 2rem;
   min-height: 300px;
@@ -139,6 +140,6 @@
     font-size: 1.3rem;
   }
   .services-lead {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }

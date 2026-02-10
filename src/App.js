@@ -39,7 +39,7 @@ function App() {
         </Routes>
         
         {/* Overlay loading page */}
-        {showLoading && <LoadingPage onFinish={() => setShowLoading(false)} />}vices
+        {showLoading && <LoadingPage onFinish={() => setShowLoading(false)} />}
       </div>
 
       {openStandardModal && <StandardPricingModal aiPlans={aiPlans} swPlans={swPlans} />}

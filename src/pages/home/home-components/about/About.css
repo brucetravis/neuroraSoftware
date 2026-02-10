@@ -74,7 +74,7 @@
   text-shadow: 0 6px 30px rgba(19, 6, 34, 0.6);
 }
 
-.about-heading .accent {
+.accent {
   color: #c87cff;
   text-shadow: 0 0 18px rgba(200,124,255,0.85);
 }
@@ -82,10 +82,11 @@
 .about-lead {
   color: rgba(230,226,240,0.92);
   /* max-width: 60ch; */
-  font-size: 1.125rem;
-  line-height: 1.7;
+  font-size: 1.05rem;
+  line-height: 1.8;
   margin-top: 1.5rem;
 }
+
 
 /* Responsive */
 @media (max-width: 990px) {

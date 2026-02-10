@@ -43,6 +43,7 @@ header nav .nav-links {
 
 header nav .nav-links a {
     font-size: 14px;
+    text-decoration: none;
 }
 
 

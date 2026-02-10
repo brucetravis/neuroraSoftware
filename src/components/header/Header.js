@@ -46,11 +46,11 @@ export default function Header() {
       const currentScrollY = window.scrollY
 
       // if the current Scrolling position is greater than the last scrolling position
-      if (currentScrollY > lastScrollY) {
+      if (currentScrollY - lastScrollY > 10) {
         // hide the header
         setShow(false)
 
-      } else {
+      } else if (lastScrollY - currentScrollY > 10) {
         //  display the header
         setShow(true)
       }

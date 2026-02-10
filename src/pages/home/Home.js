@@ -39,7 +39,7 @@ export default function Home() {
         })
       },
 
-      { threshold: 0 } // triggers when 50% of the section is visible 
+      { threshold: 0.5 } // triggers when 50% of the section is visible 
     )
 
     sections.forEach(section => {

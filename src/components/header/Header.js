@@ -29,6 +29,7 @@ export default function Header() {
     { name: 'Home', path: '/', id: 'hero' },
     { name: 'About', path: '/about', id: 'about' },
     { name: 'Services', path: '/services', id: 'services' },
+    { name: 'Software', path: '/software', id: 'software' },
     { name: 'Why Us', path: '/whyus', id: 'whyus' },
     { name: 'Prices', path: '/pricing', id: 'pricing' },
     { name: 'Contact', path: '/contact', id: 'contact' }
@@ -125,6 +126,13 @@ export default function Header() {
               onClick={() => scrollToSection('services')}
             >
               Services
+            </AnimatedLink>
+
+            <AnimatedLink
+              style={getLinkSpring(activeSection === 'software')}
+              onClick={() => scrollToSection('software')}
+            >
+              Software
             </AnimatedLink>
 
             <AnimatedLink

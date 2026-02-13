@@ -8,6 +8,7 @@ import Pricing from './home-components/pricing/Pricing'
 import Contact from './home-components/contact/Contact'
 import { useActive } from '../../contexts/active/ActiveContext'
 import { useScrollRefs } from '../../contexts/scroll/ScrollContext'
+import Software from './home-components/software/Software'
 
 export default function Home() {
 
@@ -17,7 +18,7 @@ export default function Home() {
   const { sectionRefs } = useScrollRefs()
 
   // get each section id
-  const { hero, about, services, whyUs, pricing, contact } = sectionRefs
+  const { hero, about, services, whyUs, pricing, contact, software } = sectionRefs
 
   useEffect(() => {
 
@@ -25,6 +26,7 @@ export default function Home() {
       { ref: hero, id: 'hero' },
       { ref: about, id: 'about' },
       { ref: services, id: 'services' },
+      { ref: software, id: 'software' },
       { ref: whyUs, id: 'whyUs' },
       { ref: pricing, id: 'pricing' },
       { ref: contact, id: 'contact' }
@@ -51,7 +53,7 @@ export default function Home() {
 
     return () => observer.disconnect()
 
-  }, [ hero, about, services, whyUs, pricing, contact, setActiveSection ])
+  }, [ hero, about, services, software, whyUs, pricing, contact, setActiveSection ])
 
   useEffect(() => {
     
@@ -68,6 +70,7 @@ export default function Home() {
       <section ref={hero}><Hero /></section>
       <section ref={about}><About /></section>
       <section ref={services}><Services /></section>
+      <section ref={software}><Software /></section>
       <section ref={whyUs}><WhyUs /></section>
       <section ref={pricing}><Pricing /></section>
       <section ref={contact}><Contact /></section>

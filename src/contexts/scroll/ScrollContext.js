@@ -13,6 +13,7 @@ export default function ScrollProvider({ children }) {
     const heroRef = useRef(null)
     const aboutRef = useRef(null)
     const servicesRef = useRef(null)
+    const softwareRef = useRef(null)
     const whyUsRef = useRef(null)
     const pricingRef = useRef(null)
     const contactRef = useRef(null)
@@ -22,6 +23,7 @@ export default function ScrollProvider({ children }) {
         hero: heroRef,
         about: aboutRef,
         services: servicesRef,
+        software: softwareRef,
         whyUs: whyUsRef,
         pricing: pricingRef,
         contact: contactRef

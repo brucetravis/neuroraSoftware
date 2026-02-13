@@ -69,9 +69,10 @@ button {
   justify-content: center;
 }
 
-button:hover {
+
+/* button:hover {
   background: linear-gradient(180deg, #c87cff, #541f9e);
-}
+} */
 
 /* -------------------------------
    Links

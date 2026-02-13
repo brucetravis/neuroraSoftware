@@ -8,6 +8,7 @@ import { usePricing } from './contexts/PricingProvider';
 import ChatWidget from './components/chatwidget/ChatWidget';
 import CustomQuoteModal from './components/modals/custom/CustomQuoteModal';
 import StandardPricingModal from './components/modals/standard/StandardPricingModal';
+import ScrollBtn from './components/buttons/scrollbtn/ScrollBtn';
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
         
         
         <ChatWidget />
+        
+
+        <ScrollBtn />
       </div>
 
       {openStandardModal && <StandardPricingModal aiPlans={aiPlans} swPlans={swPlans} />}

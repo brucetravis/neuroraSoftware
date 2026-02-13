@@ -2,5 +2,12 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 999
+    z-index: 999;
+    transition: all 0.3s ease;
 }
+
+.scrollBtn button:hover {
+    background: #b57bdf;
+}
+
+

@@ -55,7 +55,7 @@ p, span, a, li {
 button {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  background-color: #c87cff;
+  background: #c87cff;
   color: #000;
   font-size: 1.125rem;
   padding: 0.6rem 1.5rem;
@@ -69,9 +69,9 @@ button {
   justify-content: center;
 }
 
-
-/* button:hover {
-  background: linear-gradient(180deg, #c87cff, #541f9e);
+/* 
+button:hover {
+  background: #b57bdf;
 } */
 
 /* -------------------------------

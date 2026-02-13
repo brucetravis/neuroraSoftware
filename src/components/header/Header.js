@@ -128,8 +128,8 @@ export default function Header() {
             </AnimatedLink>
 
             <AnimatedLink
-              style={getLinkSpring(activeSection === 'whyUs')}
-              onClick={() => scrollToSection('whyUs')}
+              style={getLinkSpring(activeSection === 'whyus')}
+              onClick={() => scrollToSection('whyus')}
             >
               Why Us
             </AnimatedLink>

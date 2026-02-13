@@ -17,7 +17,7 @@ export default function Home() {
   const { sectionRefs } = useScrollRefs()
 
   // get each section id
-  const { hero, about, services, whyUs, pricing, contact } = sectionRefs
+  const { hero, about, services, whyus, pricing, contact } = sectionRefs
 
   useEffect(() => {
 
@@ -25,7 +25,7 @@ export default function Home() {
       { ref: hero, id: 'hero' },
       { ref: about, id: 'about' },
       { ref: services, id: 'services' },
-      { ref: whyUs, id: 'whyUs' },
+      { ref: whyus, id: 'whyus' },
       { ref: pricing, id: 'pricing' },
       { ref: contact, id: 'contact' }
     ]
@@ -39,7 +39,7 @@ export default function Home() {
         })
       },
 
-      { threshold: 0.5 } // triggers when 50% of the section is visible 
+      { threshold: 0.3 } // triggers when 30% of the section is visible 
     )
 
     sections.forEach(section => {
@@ -51,7 +51,7 @@ export default function Home() {
 
     return () => observer.disconnect()
 
-  }, [ hero, about, services, whyUs, pricing, contact, setActiveSection ])
+  }, [ hero, about, services, whyus, pricing, contact, setActiveSection ])
 
   useEffect(() => {
     
@@ -68,7 +68,7 @@ export default function Home() {
       <section ref={hero}><Hero /></section>
       <section ref={about}><About /></section>
       <section ref={services}><Services /></section>
-      <section ref={whyUs}><WhyUs /></section>
+      <section ref={whyus}><WhyUs /></section>
       <section ref={pricing}><Pricing /></section>
       <section ref={contact}><Contact /></section>
     </div>

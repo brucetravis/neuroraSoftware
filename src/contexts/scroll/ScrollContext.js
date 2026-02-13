@@ -22,7 +22,7 @@ export default function ScrollProvider({ children }) {
         hero: heroRef,
         about: aboutRef,
         services: servicesRef,
-        whyUs: whyUsRef,
+        whyus: whyUsRef,
         pricing: pricingRef,
         contact: contactRef
     }

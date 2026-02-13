@@ -19,7 +19,7 @@ export default function About() {
 
   const paraSpring = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'translateY(0px)' : 'translateY(12px)',
+    transform: inView ? 'translateY(0px)' : 'translateY(50px)', // slide from the right
     config: { tension: 200, friction: 22 },
     delay: 400
   });
@@ -27,8 +27,7 @@ export default function About() {
 
   const imageSpring = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'translateX(0px)' : 'translateX(-30px)',
-    // transform: inView ? 'transformX(0px)' : 'transformX(-30px)',
+    transform: inView ? 'translateX(0px)' : 'translateX(-50px)', // slide from the left
     config: { tension: 200, friction: 22 },
     delay: 250
   })
@@ -69,13 +68,10 @@ export default function About() {
           </animated.h2>
 
           <animated.p style={paraSpring} className="about-lead">
-            Neurora is a <strong>software development company</strong> that develops <strong>smart software</strong> tailored 
-            to your business needs. At Neurora, we create <stong>AI-powered software solutions</stong> and intelligent
-            digital tools that help businesses scale effortlessly, streamline workflows, and achieve measurable growth.
-            From intuitive websites and feature-rich mobile apps to advanced machine learning tools, tailored automation, 
-            and AI solutions available for subscription or rental, we design technology that streamlines workflows, boosts 
-            efficiency, and drives measurable growth. We empower startups, SMEs, and enterprises to turn ideas 
-            into results, optimize operations, and transform visitors into loyal customers.
+            Neurora is a <strong>software development company</strong> that builds intelligent software and <strong>AI-powered solutions</strong> 
+            to help <strong className="accent">African businesses</strong> adopt, manage, and optimize AI features. Our platform guides businesses on which AI tools to use, tracks performance, provides actionable insights, and recommends strategic actions to maximize growth and efficiency. 
+            From entry-level adoption guidance to subscription management, real-time performance analytics, and strategic growth recommendations, 
+            Neurora empowers startups, SMEs, and enterprises to confidently <strong className='accent'>Adopt</strong> AI into their workflows, make data-driven decisions, and achieve measurable results.
           </animated.p>
         </div>
 

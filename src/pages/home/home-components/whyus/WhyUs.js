@@ -51,10 +51,10 @@ export default function WhyUs() {
 
   // Points for trail animation
   const points = [
-    'Cutting-edge AI solutions',
-    'Streamlined business automation',
-    'Scalable and robust software',
-    'Expert support & consultation'
+    'Guided AI adoption for African businesses',
+    'AI management and subscription in one platform',
+    'Real-time analytics & actionable insights',
+    'Recommendations for growth and optimization'
   ]
 
   // React Spring for smooth, non-conflicting animations
@@ -77,10 +77,25 @@ export default function WhyUs() {
 
   const titleSpring2 = useSpring({
     opacity: inView ? 1 : 0,
-    transform: inView ? 'translateY(0px)' : 'translateY(20px)',
+    transform: inView ? 'translateY(0px)' : 'translateY(50px)', // slide from the left
+    config: { tension: 200, friction: 20 },
+    delay: 200 // tiny offset to avoid conflicts
+  })
+
+  const imageSpring = useSpring({
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateY(0px)' : 'translateY(-50px)', // slide from the left
     config: { tension: 200, friction: 20 },
     delay: 150 // tiny offset to avoid conflicts
-    })
+  })
+
+  const rightSpring = useSpring({
+    opacity: inView ? 1 : 0,
+    transform: inView ? 'translateY(0px)' : 'translateY(30px)',
+    config: { tension: 200, friction: 22 },
+    delay: 150
+  });
+
 
 
 
@@ -91,24 +106,24 @@ export default function WhyUs() {
             </animated.h4>
 
             <animated.h2 style={titleSpring2} className="whyus-heading">
-              AI-Driven Solutions That Scale <span className="accent">Your Business</span>
+              Simplifying AI adoption and Growth for <span className="accent">African Businesses</span>
             </animated.h2>
 
             <div className="whyus-inner">
-              <div className="whyus-left">
-                  <Canvas style={{ width: '100%', height: '400px', pointerEvents: 'none' }}>
-                  <ambientLight intensity={1} />
-                  <FloatingGif />
-                  </Canvas>
-              </div>
+              <animated.div style={imageSpring} className="whyus-left">
+                <Canvas style={{ width: '100%', height: '400px', pointerEvents: 'none' }}>
+                <ambientLight intensity={1} />
+                <FloatingGif />
+                </Canvas>
+              </animated.div>
 
-              <div className="whyus-right">
-                  {trail.map((props, index) => (
-                    <animated.div key={index} style={props} className="whyus-point">
-                        {points[index]}
-                    </animated.div>
-                  ))}
-              </div>
+              <animated.div style={rightSpring} className="whyus-right">
+                {trail.map((props, index) => (
+                  <animated.div key={index} style={props} className="whyus-point">
+                      {points[index]}
+                  </animated.div>
+                ))}
+              </animated.div>
             </div>
         </section>
     )

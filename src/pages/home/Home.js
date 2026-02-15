@@ -75,7 +75,7 @@ export default function Home() {
       <section ref={services}><Services /></section>
       <section ref={software}><Software /></section>
       <section ref={whyus}><WhyUs /></section>
-      <section ref={pricing}><Pricing /></section>
+      {/* <section ref={pricing}><Pricing /></section> */}
       <section ref={contact}><Contact /></section>
     </div>
   )

@@ -1,0 +1,304 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    z-index: 1000; /* behind the modal */
+}
+
+
+.standard-modal {
+    position: absolute;
+    top: 50%; /* move to vertical center */
+    left: 50%; /* move to horizontal center */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    z-index: 999; /* above other content */
+    background: linear-gradient(180deg, #3b1a53 0%, #1f0742 45%, #13061a 100%);
+    max-width: 600px;
+    width: 90%; /* responsive on small screens */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+
+.standard-modal h2 {
+    color: rgba(200,124,255,0.92);
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.standard-modal h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.standard-modal h4 strong {
+    color: #4CAF50;
+}
+
+
+.standard-modal .cost strong {
+    color: #4CAF50;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.payment-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2vh;
+}
+
+
+
+.standard-modal .entity-section,
+.standard-modal .software-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.payment-buttons .purchase-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.payment-buttons .cancel-button {
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.client-questionnaire {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+.client-questionnaire h3 {
+    color: rgba(141, 76, 187, 0.92);
+}
+
+.client-questionnaire input {
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.client-questionnaire .name_of_entity {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    margin: 5px 0;
+}
+
+.schedule_meeting {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+.schedule_meeting h3 {
+    color: #8d4cbbeb;
+}
+
+.schedule_meeting a {
+    color: rgba(255, 255, 255, 0.9);
+    /* font-size: 20px; */
+    padding: 6px 24px;
+    background: #643486eb;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+
+.schedule_meeting a:hover {
+    color: rgba(0, 0, 0, 0.9);
+    background: #c393e6eb;
+    cursor: pointer;;
+}
+
+.client-questionnaire .name_of_entity label {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    color: #8d4cbbeb;
+}
+
+.client-questionnaire .name_of_entity input {
+    width: 30vw;
+    height: 4vh;
+    padding-left: 10px;
+    border: none;
+    border-radius: 3px;
+    background: rgba(200, 124, 255, 0.4);
+    color: white;
+    outline: none ;
+    /* padding: 5px 100px; */
+}
+
+.client-questionnaire .name_of_entity input:focus {
+    border: 3px solid #8d4cbbeb;
+    border-radius: 5px;
+}
+
+.billing .billing-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.billing .billing-info label {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    color: #8d4cbbeb;
+}
+
+.billing .billing-info input {
+    width: 30vw;
+    height: 4vh;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background: rgba(200, 124, 255, 0.4);
+    color: white;
+    outline: none ;
+    /* padding: 5px 100px; */
+}
+
+.billing .billing-info input:focus {
+    border: 3px solid #8d4cbbeb;
+    border-radius: 5px;
+}
+
+
+.client-questionnaire .owner_type,
+.client-questionnaire .software_type,
+.client-questionnaire .domain_name,
+.client-questionnaire .maintenance,
+.client-questionnaire .schedule_meeting {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+
+.client-questionnaire .owner_type label,
+.client-questionnaire .software_type label, 
+.client-questionnaire .domain_name label,
+.client-questionnaire .maintenance label {
+    color: white;
+    display: flex;
+    gap: 10px
+}
+
+
+@media (max-width: 992px) {
+    
+    .modal-overlay {
+        overflow-y: scroll;
+    }
+
+    .standard-modal h2 {
+        margin-top: 8vh;
+        line-height: 1;
+        font-size: 1.5rem;
+    }
+
+    /* Stack the radios properly */
+    .client-questionnaire .entity-section,
+    .client-questionnaire .software-section {
+        flex-direction: column;
+        gap: 3px;
+        align-items: flex-start;
+    }
+
+    /* Budget section should not shift right on mobile */
+    .budget-div {
+        margin-left: 0;
+        width: 100%
+    }
+
+    .standard-modal h3 {
+        font-size: 16px;
+    }
+
+     /* Make select + input full width, stacked */
+    .standard-modal .prices {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .standard-modal .prices select,
+    .standard-modal .prices input,
+    .name_of_entity,
+    .budget-div {
+        width: 100%;
+    }
+
+    .billing .billing-info input {
+        width: 100%;
+    }
+
+    /* Ensure name_of_entity expands correctly */
+    .name_of_entity {
+        width: 100%;
+    }
+
+    .standard-modal .name_of_entity input {
+        display: block;
+        width: 100%;
+        padding: 9px 18px;
+        box-sizing: border-box; /* ensures padding doesn't break width */
+    }
+
+    .name_of_entity label {
+        display: block;
+        margin-bottom: 5px; /* optional spacing */
+    }
+
+    .standard-modal .maintenance {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .payment-buttons {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+}
+

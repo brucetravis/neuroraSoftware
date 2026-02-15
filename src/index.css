@@ -1,13 +1,152 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ===============================
+   🌐 Neurora Global Styles (Premium)
+   =============================== */
+
+html, body .App {
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* -------------------------------
+   Font & Base Setup
+---------------------------------*/
+body {
+  font-family: 'Poppins', sans-serif;
+  /*background-color: #f9f9fb; /* soft neutral light background */
+  background: linear-gradient(180deg, #07030a 0%, #0f0420 45%, #13061a 100%);
+  /* color: #222; */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
+
+/* -------------------------------
+   Headings
+---------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  color: #5514b1; /* deep purple, premium tone */
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+/* h1 { font-size: 2.5rem; line-height: 1.2; } */
+h2 { font-size: 2rem; line-height: 1.3; }
+h3 { font-size: 1.5rem; line-height: 1.3; }
+h4 { font-size: 1.25rem; font-weight: 500; line-height: 1.3; }
+h5 { font-size: 1.125rem; font-weight: 500; line-height: 1.3; }
+h6 { font-size: 1rem; font-weight: 500; line-height: 1.3; }
+
+/* -------------------------------
+   Paragraphs & Text
+---------------------------------*/
+p, span, a, li {
+  font-size: 1rem;
+  line-height: 1.6;
+  /* color: #222; */
+  color: #fff;
+}
+
+.small-text {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.4;
+  color: #555;         /* subtle tone for captions */
+}
+
+/* -------------------------------
+   Buttons (Premium)
+---------------------------------*/
+button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background: #c87cff;
+  color: #000;
+  font-size: 1.125rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+button:hover {
+  background: #b57bdf;
+} */
+
+/* -------------------------------
+   Links
+---------------------------------*/
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4A90E2; /* premium interactive tone */
+}
+
+/* -------------------------------
+   Images & Media
+---------------------------------*/
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* -------------------------------
+   Containers & Sections
+---------------------------------*/
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -------------------------------
+   Utility Classes
+---------------------------------*/
+.text-center { text-align: center; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+
+
+/* Main toast card */
+.Toastify__toast {
+  background: #2a173a;     /* your dark purple */
+  color: #ffffff;          /* white text */
+  border-radius: 10px;
+  font-family: inherit;
+}
+
+/* Success toast */
+.Toastify__toast--success {
+  border-left: 5px solid #8d4cbb;   /* neon purple */
+}
+
+/* Error toast */
+.Toastify__toast--error {
+  border-left: 5px solid #ff4d4d;
+}
+
+/* Info toast */
+.Toastify__toast--info {
+  border-left: 5px solid #4da6ff;
+}
+
+/* Progress bar */
+.Toastify__progress-bar {
+  background: #8d4cbb;  /* purple progress bar */
+}
+

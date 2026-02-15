@@ -1,0 +1,112 @@
+.about-hero {
+  position: relative;
+  padding: 6.5rem 1.5rem;
+  /* background: linear-gradient(180deg, #07030a 0%, #0f0420 45%, #13061a 100%); */
+  color: #fff;
+  /* overflow: hidden ; */
+}
+
+/* ceiling glow (top-centered) */
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 250px;
+  /* background: radial-gradient(ellipse at center, rgba(200,124,255,0.18), transparent 40%); */
+  background: radial-gradient(ellipse at center, rgb(214, 171, 255), transparent 50%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-hero::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgb(200, 124, 255), transparent 60%);
+  /* background: radial-gradient(circle, rgb(155, 255, 124), transparent 60%); */
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 2.5rem; */
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Right content */
+.about-right { color: #eaeaf2; }
+
+.about-kicker {
+  color: rgba(200,124,255,0.9);
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: 0 0 0.6rem 0;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.about-heading {
+  margin: 0 0 1rem 0;
+  font-size: 3rem;
+  line-height: 1.08;
+  color: #fff;
+  text-shadow: 0 6px 30px rgba(19, 6, 34, 0.6);
+}
+
+.accent {
+  color: #c87cff;
+  text-shadow: 0 0 18px rgba(200,124,255,0.85);
+}
+
+.about-lead {
+  color: rgba(230,226,240,0.92);
+  max-width: 60ch;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-top: 1.5rem;
+}
+
+
+/* Responsive */
+@media (max-width: 990px) {
+  .about-inner {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+
+  .about-heading {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .about-kicker {
+    margin-bottom: 12vh;
+  }
+
+  .about-lead {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+

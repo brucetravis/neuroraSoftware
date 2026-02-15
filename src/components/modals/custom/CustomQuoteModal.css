@@ -1,0 +1,187 @@
+.quotation-modal-overlay {
+    position: fixed;
+    inset: 0;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.custom-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    z-index: 2;
+    background: linear-gradient(180deg, #3b1a53 0%, #1f0742 45%, #13061a 100%);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.custom-modal h2 {
+    color: rgba(200,124,255,0.92);
+}
+
+.custom-modal h4 {
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.custom-modal .entity-section,
+.custom-modal .software-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.custom-modal .prices {
+    display: flex;
+    justify-content: center;
+    gap: 10px
+}
+
+.custom-modal select {
+    background: rgba(58, 16, 88, 0.7);
+    color: #fff;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-modal input {
+    background: rgba(58, 16, 88, 0.7);
+    padding: 9px 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+}
+
+
+.budget-div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+}
+
+
+.quotation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.quotation-buttons .submit-quotation {
+    background-color: #4CAF50;
+    border: none;
+    padding: 8px 30px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 4px 2px;
+    transition: all 0.3s ease;
+}
+
+
+.quotation-buttons .submit-quotation:hover {
+    background-color: #408d42;
+}
+
+.quotation-buttons .cancel-quotation {
+    background-color: #f44336;
+    border: none;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 4px 2px;
+    transition: all 0.3s ease;
+}
+
+.quotation-buttons .cancel-quotation:hover {
+    background-color: #b4362d;
+}
+
+
+@media (max-width: 992px) {
+    
+    .quotation-modal-overlay {
+        overflow-y: scroll;
+    }
+
+    .custom-modal h2 {
+        margin-top: 5vh;
+        line-height: 1;
+        font-size: 1.5rem;
+    }
+
+    /* Stack the radios properly */
+    .custom-modal .entity-section,
+    .custom-modal .software-section {
+        flex-direction: column;
+        gap: 3px;
+        align-items: flex-start;
+    }
+
+    /* Budget section should not shift right on mobile */
+    .budget-div {
+        margin-left: 0;
+        width: 100%
+    }
+
+    .custom-modal h3 {
+        font-size: 16px;
+    }
+
+     /* Make select + input full width, stacked */
+    .custom-modal .prices {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .custom-modal .prices select,
+    .custom-modal .prices input,
+    .name_of_entity,
+    .budget-div {
+        width: 100%;
+    }
+
+    /* Ensure name_of_entity expands correctly */
+    .name_of_entity {
+        width: 100%;
+    }
+
+    .custom-modal .name_of_entity input {
+        display: block;
+        width: 100%;
+        padding: 9px 18px;
+        box-sizing: border-box; /* ensures padding doesn't break width */
+    }
+
+    .name_of_entity label {
+        display: block;
+        margin-bottom: 5px; /* optional spacing */
+    }
+
+    .custom-modal .maintenance {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .quotation-buttons {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+}
+

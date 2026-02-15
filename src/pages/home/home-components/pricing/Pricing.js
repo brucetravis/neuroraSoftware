@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './Pricing.css';
 import { useInView } from 'react-intersection-observer';
+import { aiPlans, swPlans } from '../../../../data/Pricing';
 import { useSpring, useSprings, animated } from '@react-spring/web';
 import { usePricing } from '../../../../contexts/PricingProvider';
-import { aiPlans, swPlans } from '../../../../data/Pricing';
 
 
 export default function Pricing() {

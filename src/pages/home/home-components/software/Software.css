@@ -2,7 +2,7 @@
   position: relative;
   padding: 6rem 1.5rem;
   color: #fff;
-  overflow: hidden ;
+  /* overflow: hidden; */
 }
 
 .software-hero::before {

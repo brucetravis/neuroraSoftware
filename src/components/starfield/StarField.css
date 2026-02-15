@@ -2,7 +2,7 @@
     position: absolute;
     inset: 0;
     z-index: 1; /* below hero content */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 

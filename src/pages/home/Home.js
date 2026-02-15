@@ -41,7 +41,10 @@ export default function Home() {
         })
       },
 
-      { threshold: 0.3 } // triggers when 30% of the section is visible 
+      { 
+        threshold: 0.3,
+        rootMargin: "-80px 0px 0px 0px"
+      } // triggers when 30% of the section is visible 
     )
 
     sections.forEach(section => {

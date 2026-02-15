@@ -48,7 +48,7 @@
 }
 
 .contact-subtext {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   opacity: 0.8;
   margin-bottom: 3rem;
 }
@@ -150,6 +150,10 @@
 
 
 @media (max-width: 990px) {
+  .contact-section {
+    background-attachment: scroll;
+  }
+  
   .row {
     flex-direction: column;
   }
@@ -159,7 +163,7 @@
   }
 
   .contact-subtext {
-    font-size: 1rem;
+    font-size: 1.05rem;
     opacity: 0.8;
     margin-bottom: 3rem;
   }

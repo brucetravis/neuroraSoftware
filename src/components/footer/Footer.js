@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
         
         <div className="footer-bottom">
-            © 2024 Neurora. All rights reserved.
+            © 2026 Neurora. All rights reserved.
         </div>
     </footer>
   )

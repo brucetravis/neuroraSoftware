@@ -24,6 +24,8 @@ export default function Header() {
   // state to open and close the menu on mobile
   const [ menuOpen, setMenuOpen] = useState(false) // initially, the menu is closed
 
+  const [ isScrollingProgrammatically, setIsScrollingProgrammatically ] = useState(false)
+
   // header links on phone
   const menuItems = [
     { name: 'Home', path: '/', id: 'hero' },
@@ -39,7 +41,7 @@ export default function Header() {
   useEffect(() => {
 
     // on mobile exit the function
-    if (menuOpen) return
+    if (menuOpen || isScrollingProgrammatically) return
 
     // function to appy the scroll effect
     const handleScroll = () => {
@@ -109,49 +111,77 @@ export default function Header() {
           >
             <AnimatedLink
               style={getLinkSpring(activeSection === 'hero')}
-              onClick={() => scrollToSection('hero')}
+              onClick={() => {
+                setIsScrollingProgrammatically(true)
+                scrollToSection('hero')
+                setTimeout(() => setIsScrollingProgrammatically(false), 700)
+              }}
             >
               Home
             </AnimatedLink>
 
             <AnimatedLink
               style={getLinkSpring(activeSection === 'about')}
-              onClick={() => scrollToSection('about')}
+              onClick={() => {
+                setIsScrollingProgrammatically(true)
+                scrollToSection('about')
+                setTimeout(() => setIsScrollingProgrammatically(false), 700)
+              }}
             >
               About
             </AnimatedLink>
 
             <AnimatedLink
               style={getLinkSpring(activeSection === 'services')}
-              onClick={() => scrollToSection('services')}
+              onClick={() => {
+                setIsScrollingProgrammatically(true)
+                scrollToSection('services')
+                setTimeout(() => setIsScrollingProgrammatically(false), 700)
+              }}
             >
               Services
             </AnimatedLink>
 
             <AnimatedLink
               style={getLinkSpring(activeSection === 'software')}
-              onClick={() => scrollToSection('software')}
+              onClick={() => {
+                setIsScrollingProgrammatically(true)
+                scrollToSection('software')
+                setTimeout(() => setIsScrollingProgrammatically(false), 700)
+              }}
             >
               Software
             </AnimatedLink>
 
             <AnimatedLink
-              style={getLinkSpring(activeSection === 'whyUs')}
-              onClick={() => scrollToSection('whyUs')}
+              style={getLinkSpring(activeSection === 'whyus')}
+              onClick={() => {
+                setIsScrollingProgrammatically(true)
+                scrollToSection('whyus')
+                setTimeout(() => setIsScrollingProgrammatically(false), 700)
+              }}
             >
               Why Us
             </AnimatedLink>
 
-            <AnimatedLink
+            {/* <AnimatedLink
               style={getLinkSpring(activeSection === 'pricing')}
-              onClick={() => scrollToSection('pricing')}
+              onClick={() => {
+                setIsScrollingProgrammatically(true)
+                scrollToSection('pricing')
+                setTimeout(() => setIsScrollingProgrammatically(false), 700)
+              }}
             >
               Prices
-            </AnimatedLink>
+            </AnimatedLink> */}
 
             <AnimatedLink
               style={getLinkSpring(activeSection === 'contact')}
-              onClick={() => scrollToSection('contact')}
+              onClick={() => {
+                setIsScrollingProgrammatically(true)
+                scrollToSection('contact')
+                setTimeout(() => setIsScrollingProgrammatically(false), 700)
+              }}
             >
               Contact
             </AnimatedLink>

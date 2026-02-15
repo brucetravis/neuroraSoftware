@@ -71,7 +71,7 @@ export default function About() {
             Neurora is a <strong>software development company</strong> that builds intelligent software and <strong>AI-powered solutions</strong> 
             to help <strong className="accent">African businesses</strong> adopt, manage, and optimize AI features. Our platform guides businesses on which AI tools to use, tracks performance, provides actionable insights, and recommends strategic actions to maximize growth and efficiency. 
             From entry-level adoption guidance to subscription management, real-time performance analytics, and strategic growth recommendations, 
-            Neurora empowers startups, SMEs, and enterprises to confidently <strong className='accent'>Adopt</strong> AI into their workflows, make data-driven decisions, and achieve measurable results.
+            Neurora empowers startups, SMEs, and enterprises to confidently <strong className='accent'>Adopt AI</strong> into their workflows, make data-driven decisions, and achieve measurable results.
           </animated.p>
         </div>
 

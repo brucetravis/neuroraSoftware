@@ -9,6 +9,7 @@ import { usePricing } from './contexts/PricingProvider';
 import LoadingPage from './components/loadingpage/LoadingPage';
 import CustomQuoteModal from './components/modals/custom/CustomQuoteModal';
 import StandardPricingModal from './components/modals/standard/StandardPricingModal';
+// import ScrollBtn from './components/buttons/scrollbtn/ScrollBtn';
 // import ChatWidget from './components/chatwidget/ChatWidget';
 
 function App() {
@@ -38,9 +39,11 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
         </Routes>
-
-        {/* <ChatWidget /> */}
         
+        {/* <ChatWidget /> */}
+
+        {/* <ScrollBtn /> */}
+
         {/* Overlay loading page */}
         {showLoading && <LoadingPage onFinish={() => setShowLoading(false)} />}
       </div>

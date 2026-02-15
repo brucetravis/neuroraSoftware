@@ -1,7 +1,7 @@
 .whyus-hero {
   position: relative;
   padding: 6rem 1.5rem;
-  overflow: hidden ;
+  /* overflow: hidden; */
   color: #fff;
   /* background: linear-gradient(180deg, #07030a 0%, #0f0420 100%); */
 }

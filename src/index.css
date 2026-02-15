@@ -2,6 +2,11 @@
    🌐 Neurora Global Styles (Premium)
    =============================== */
 
+  html, body .App {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
 /* -------------------------------
    Font & Base Setup
 ---------------------------------*/

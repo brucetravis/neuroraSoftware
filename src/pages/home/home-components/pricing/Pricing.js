@@ -7,7 +7,10 @@ import { usePricing } from '../../../../contexts/PricingProvider';
 
 
 export default function Pricing() {
-    const [ref, inView] = useInView({ threshold: 0.2 });
+    const [ref, inView] = useInView({ 
+        threshold: 0.2,
+        rootMargin: "-80px 0px -20% 0px"
+    });
     const [hasAnimated, setHasAnimated] = useState(false);
 
     const shouldRender = inView || hasAnimated;
@@ -58,28 +61,18 @@ export default function Pricing() {
         }
     }, [inView, hasAnimated]);
 
-    // const EUR_RATE = 0.92;
-    // const KES_RATE = 130;
 
-    // const format = (usd) => {
-    //     if (!usd) return '$0';
-    //     if (currency === 'USD') return `$${usd.toLocaleString()}`;
-    //     if (currency === 'EUR') return `€${Math.round(usd * EUR_RATE).toLocaleString()}`;
-    //     return `KSh ${Math.round(usd * KES_RATE).toLocaleString()}`;
-    // };
+    // // function to handle the plans
+    // const handleStandardPlans = (plan) => {
+    //     setSelectedPlan(plan);
+    //     setOpenStandardModal(true);
+    // }
 
-
-    // function to handle the plans
-    const handleStandardPlans = (plan) => {
-        setSelectedPlan(plan);
-        setOpenStandardModal(true);
-    }
-
-    // function to handle the plans
-    const handleQuotationPlans = (plan) => {
-        setSelectedPlan(plan);
-        setOpenQuotationModal(true)
-    }
+    // // function to handle the plans
+    // const handleQuotationPlans = (plan) => {
+    //     setSelectedPlan(plan);
+    //     setOpenQuotationModal(true)
+    // }
 
     return (
         <section className="pricing-section" ref={ref}>
@@ -129,11 +122,6 @@ export default function Pricing() {
                                 >
                                     {plan.tag && <div className="badge">{plan.tag}</div>}
 
-                                    {/* <div className="card-3d">
-                                        {/* Placeholder for future 3D or animated content
-                                        <div className="card-3d-placeholder"></div>
-                                    </div> */}
-
                                     <div className="card-body">
                                         <h4 className="card-title">{plan.name}</h4>
                                         <div className="price">
@@ -145,7 +133,7 @@ export default function Pricing() {
                                                 <li key={idx}>{feature}</li>
                                             ))}
                                         </ul>
-                                        <div className="card-cta">
+                                        {/* <div className="card-cta">
                                             <button 
                                                 className={`btn primary ${i === 1 ? 'btn-ghost' : ''}`}
                                                 onClick={() => handleStandardPlans(plan)}
@@ -159,7 +147,7 @@ export default function Pricing() {
                                             >
                                                 Request Quote
                                             </button>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </animated.article>
                             ))}
@@ -187,10 +175,6 @@ export default function Pricing() {
                             >
                             {plan.tag && <div className="badge">{plan.tag}</div>}
 
-                            {/* <div className="card-3d small">
-                                <div className="card-3d-placeholder"></div>
-                            </div> */}
-
                             <div className="card-body">
                                 <h4 className="card-title">{plan.name}</h4>
                                 <div className="price">
@@ -202,20 +186,6 @@ export default function Pricing() {
                                         <li key={idx}>{feature}</li>
                                     ))}
                                 </ul>
-                                {/* <div className="card-cta">
-                                    <button 
-                                        className="btn primary"
-                                        onClick={() => handleStandardPlans(plan) }
-                                    >
-                                        Get started
-                                    </button>
-                                    <button 
-                                        className="btn subtle"
-                                        onClick={() => handleQuotationPlans(plan) }
-                                    >
-                                        Request quote
-                                    </button>
-                                </div> */}
                             </div>
                             </animated.article>
                         ))}

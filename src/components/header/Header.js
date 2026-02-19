@@ -164,7 +164,7 @@ export default function Header() {
               Why Us
             </AnimatedLink>
 
-            {/* <AnimatedLink
+            <AnimatedLink
               style={getLinkSpring(activeSection === 'pricing')}
               onClick={() => {
                 setIsScrollingProgrammatically(true)
@@ -173,7 +173,7 @@ export default function Header() {
               }}
             >
               Prices
-            </AnimatedLink> */}
+            </AnimatedLink>
 
             <AnimatedLink
               style={getLinkSpring(activeSection === 'contact')}

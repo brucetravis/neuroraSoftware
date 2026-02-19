@@ -10,7 +10,7 @@ import LoadingPage from './components/loadingpage/LoadingPage';
 import CustomQuoteModal from './components/modals/custom/CustomQuoteModal';
 import StandardPricingModal from './components/modals/standard/StandardPricingModal';
 // import ScrollBtn from './components/buttons/scrollbtn/ScrollBtn';
-// import ChatWidget from './components/chatwidget/ChatWidget';
+import ChatWidget from './components/chatwidget/ChatWidget';
 
 function App() {
 
@@ -40,7 +40,7 @@ function App() {
           <Route path='/' element={<Home />} />
         </Routes>
         
-        {/* <ChatWidget /> */}
+        <ChatWidget />
 
         {/* <ScrollBtn /> */}
 

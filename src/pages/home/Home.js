@@ -4,7 +4,7 @@ import Hero from './home-components/hero/Hero'
 import About from './home-components/about/About'
 import Services from './home-components/services/Services'
 import WhyUs from './home-components/whyus/WhyUs'
-import Pricing from './home-components/pricing/Pricing'
+// import Pricing from './home-components/pricing/Pricing'
 import Contact from './home-components/contact/Contact'
 import { useActive } from '../../contexts/active/ActiveContext'
 import { useScrollRefs } from '../../contexts/scroll/ScrollContext'
@@ -75,7 +75,7 @@ export default function Home() {
       <section ref={services}><Services /></section>
       <section ref={software}><Software /></section>
       <section ref={whyus}><WhyUs /></section>
-      <section ref={pricing}><Pricing /></section>
+      {/* <section ref={pricing}><Pricing /></section> */}
       <section ref={contact}><Contact /></section>
     </div>
   )

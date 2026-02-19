@@ -11,11 +11,41 @@ export default function Software() {
     // an array of software
     // an array of services
     const software = [
-        { icon: <Monitor size={32} color="#c87cff" />, title: 'Web Development', description: 'Responsive websites, custom interfaces, and e-commerce solutions integrated with AI.' },
-        { icon: <Smartphone size={32} color="#c87cff" />, title: 'Smart Mobile Apps', description: 'Feature-rich smart mobile apps for iOS and Android platforms integrated with AI.' },
-        { icon: <Cpu size={32} color="#c87cff" />, title: 'Machine Learning Tools', description: 'AI-powered predictive and analytics solutions.' },
-        { icon: <Settings size={32} color="#c87cff" />, title: 'Automation Solutions', description: 'Streamline business processes with intelligent automation.' },
-        { icon: <Zap size={32} color="#c87cff" />, title: 'AI Subscriptions & Rentals', description: 'Pay-as-you-go AI tools and services for businesses.' },
+      { 
+        icon: <Monitor size={32} color="#c87cff" />, 
+        title: 'Web Development', 
+        description: 'Responsive websites, custom interfaces, and e-commerce solutions integrated with AI.',
+        price: 'FROM KES 35,000'
+      },
+      { 
+        icon: <Smartphone size={32} color="#c87cff" />, 
+        title: 'Smart Mobile Apps', 
+        description: 'Feature-rich smart mobile apps for iOS and Android platforms integrated with AI.',
+        price: 'FROM KES 120,000' 
+      },
+
+      { 
+        icon: <Cpu size={32} 
+        color="#c87cff" />, 
+        title: 'Machine Learning Tools', 
+        description: 'AI-powered predictive and analytics solutions.',
+        price: 'FROM KES 200,000'
+      },
+      { 
+        icon: <Settings 
+        size={32} 
+        color="#c87cff" />, 
+        title: 'Automation Solutions', 
+        description: 'Streamline business processes with intelligent automation.',
+        price: 'FROM KES 50,000'
+      },
+      { 
+        icon: <Zap size={32} 
+        color="#c87cff" />, 
+        title: 'AI Subscriptions & Rentals', 
+        description: 'Pay-as-you-go AI tools and services for businesses.',
+        price: 'FROM KES 3,000'
+      },
     ]
 
     // Animate heading + lead text
@@ -67,9 +97,10 @@ export default function Software() {
             {trail.map((props, index) => (
                 <animated.div style={props} key={index}>
                     <ServiceCard 
-                        icon={software[index].icon}
-                        title={software[index].title}
-                        description={software[index].description}
+                      icon={software[index].icon}
+                      title={software[index].title}
+                      description={software[index].description}
+                      prices={software[index].price}
                     />
                 </animated.div>
             ))}

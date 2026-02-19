@@ -121,6 +121,14 @@
     line-height: 1.6;
 }
 
+.service-amount {
+  /* font-size: 0.82rem; */
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .icon-wrapper {
     display: flex;
     justify-content: center;

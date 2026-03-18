@@ -2,7 +2,7 @@
    🌐 Neurora Global Styles (Premium)
    =============================== */
 
-html, body .App {
+body {
   overflow-x: hidden;
   overflow-y: auto;
 }
